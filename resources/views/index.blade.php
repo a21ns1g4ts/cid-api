@@ -13,11 +13,10 @@
     <!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/prism.css">
-    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css">
     <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="https://themes.3rdwavemedia.com/demo/prettydocs/assets/css/styles.css">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
@@ -28,7 +27,7 @@
             <div class="container">
                 <div class="branding">
                     <h1 class="logo">
-                        <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                        <span aria-hidden="true" class="icon_documents_alt icon"><i class="fas fa-list-alt"></i></span>
                         <span class="text-highlight">CID</span><span class="text-bold">API</span>
                     </h1>
                 </div><!--//branding-->
@@ -152,11 +151,11 @@
 </footer><!--//footer-->
 
 <!-- Main Javascript -->
-<script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/plugins/prism-min.js"></script>
-<script type="text/javascript" src="assets/plugins/stickyfill.min.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
+<script type="text/javascript" src="https://themes.3rdwavemedia.com/demo/prettydocs/assets/js/main.js"></script>
 
 </body>
 </html>
