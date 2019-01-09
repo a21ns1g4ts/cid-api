@@ -11,9 +11,17 @@ namespace App\Transformers;
 use App\Cid10;
 use League\Fractal\TransformerAbstract;
 
+/**
+ * Class Cid10Transformer
+ * @package App\Transformers
+ */
 class Cid10Transformer extends TransformerAbstract
 {
 
+    /**
+     * @param Cid10 $cid10
+     * @return array
+     */
     public function transform(Cid10 $cid10)
     {
         return [

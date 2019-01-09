@@ -5,9 +5,16 @@ namespace App\Http\Controllers;
 use App\Cid10;
 use App\Transformers\Cid10Transformer;
 
+/**
+ * Class Cid10Controller
+ * @package App\Http\Controllers
+ */
 class Cid10Controller extends Controller
 {
 
+    /**
+     * @return array
+     */
     public function index(){
 
         $cids = Cid10::all();
@@ -16,6 +23,10 @@ class Cid10Controller extends Controller
 
     }
 
+    /**
+     * @param $codigo
+     * @return array
+     */
     public function show($codigo){
 
         $cid = Cid10::query()->get(['codigo' , 'nome'])->where('codigo' , '=' , $codigo);
