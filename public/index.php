@@ -13,6 +13,8 @@
 
 $app = require __DIR__.'/../bootstrap/app.php';
 
+require '../consts.php';
+
 /*
 |--------------------------------------------------------------------------
 | Run The Application
