@@ -126,7 +126,7 @@
                     <div class="jumbotron text-center">
                         <h1 class="doc-title">CC  3.0</h1>
                         <p>API-CID foi criado por <a href="https://github.com/Atiladanvi/" target="_blank">Atila Silva</a> desenvolvedor de aplicações <strong>WEB</strong> e está sob a licença <a class="dotted-line" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 License (CC BY 3.0)</a></p>
-                        <p>Se você quiser copiar esse projeto sinta-se livre para fazer um fork no<strong> GitHub</strong>. Você pode ! <a href="https://github.com/Atiladanvi/appd-api" target="_blank">Atiladanvi/appd-api</a></p>
+                        <p>Se você quiser copiar esse projeto sinta-se livre para fazer um fork no<strong> GitHub</strong>. Você pode ! <a href="https://github.com/Atiladanvi/appd-api" target="_blank">Atiladanvi/cid-api</a></p>
 
                         <div class="speech-bubble mt-5 text-center">
                             <h3 class="speech-title">Gostaria que fosse adicionado mais algo aqui ?</h3>

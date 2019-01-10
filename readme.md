@@ -12,7 +12,7 @@ A Classificação Internacional de Doenças e Problemas Relacionados à Saúde (
 `http://cidapi.com/cid10`
 ##### GET:
 
-`
+```json
 {
   "data":
     [
@@ -27,15 +27,15 @@ A Classificação Internacional de Doenças e Problemas Relacionados à Saúde (
       }
     ]
 }   
-`
+```
 
 ## Obtém pelo código
 
-`http://cidapi.com/cid10/{codigo-cid`
+`http://cidapi.com/cid10/{codigo-cid10}`
 
 ##### GET: 
 
-`
+```json
 {
   "data":
     [
@@ -45,7 +45,7 @@ A Classificação Internacional de Doenças e Problemas Relacionados à Saúde (
       }
     ]
 }     
-`
+```
 ### CC 3.0
 
 API-CID foi criado por Atila Silva desenvolvedor de aplicações WEB e está sob a licença Creative Commons Attribution 3.0 License (CC BY 3.0)
