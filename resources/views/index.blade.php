@@ -60,6 +60,7 @@
         </section><!--//cards-section-->
         <section class="cards-section text-center pt-1">
             <div class="section-block">
+                <p>Obtém a lista de todas as doenças:</p>
                 <div class="callout-success">
                     <h6>
                         <span class="badge-info p-1">
@@ -69,35 +70,57 @@
                     </h6>
                     <pre style="background: #212121">
 
-    <code class="language-js">   {
-      "data":
-        [
-          {
-            "codigo":"A00",
-            "nome":"Cólera"
-          },
-          {
-            "codigo":"A00.0",
-            "nome":"Cólera Devida a Vibrio Cholerae 01, Biótipo Cholerae"
-          },
-          {
-            "codigo":"A00.1","nome":"Cólera Devida a Vibrio Cholerae 01, Biótipo El Tor"
-          },
-          {
-            "codigo":"A00.9",
-            "nome":"Cólera Não Especificada"
-          },
-                  ...
-          {
-            "codigo":"A02",
-            "nome":"Outras Infecções Por Salmonella"
-          }
-        ]
-    }                    </code>
+    <code class="language-js">[
+  {
+    "codigo":"A00",
+    "nome":"Cólera"
+  },
+  {
+    "codigo":"A00.0",
+    "nome":"Cólera Devida a Vibrio Cholerae 01, Biótipo Cholerae"
+  },
+  {
+    "codigo":"A00.1","nome":"Cólera Devida a Vibrio Cholerae 01, Biótipo El Tor"
+  },
+  {
+    "codigo":"A00.9",
+    "nome":"Cólera Não Especificada"
+  },
+          ...
+  {
+    "codigo":"A02",
+    "nome":"Outras Infecções Por Salmonella"
+  }
+]                  </code>
                     </pre>
                 </div><!--//code-block-->
             </div><!--//section-block-->
             <div class="section-block">
+                <p>Obtém paginação das doenças:</p>
+                <div class="callout-success">
+                    <h6>
+                        <span class="badge-info p-1">
+                            <i class="fa fa-globe"></i> GET
+                        </span>
+                        <code>{{env('APP_URL')}}/cid10?page=1&perPage=2</code>
+                    </h6>
+                    <pre style="background: #212121">
+
+    <code class="language-js">[
+  {
+    "codigo":"A00",
+    "nome":"Cólera"
+  },
+  {
+    "codigo":"A00.0",
+    "nome":"Cólera Devida a Vibrio Cholerae 01, Biótipo Cholerae"
+  }
+]                  </code>
+                    </pre>
+                </div><!--//code-block-->
+            </div><!--//section-block-->
+            <div class="section-block">
+                <p>Obtém doença por código:</p>
                 <div class="callout-success">
                     <h6>
                         <span class="badge-info p-1">
@@ -107,15 +130,10 @@
                     </h6>
                     <pre style="background: #212121">
 
-    <code class="language-js">    {
-      "data":
-        [
-          {
-            "codigo":"A00",
-            "nome":"Cólera"
-          }
-        ]
-    }                    </code>
+    <code class="language-js">{
+   "codigo":"A00",
+   "nome":"Cólera"
+}                    </code>
                     </pre>
                 </div><!--//code-block-->
             </div><!--//section-block-->
@@ -126,7 +144,7 @@
                     <div class="jumbotron text-center">
                         <h1 class="doc-title">CC  3.0</h1>
                         <p>API-CID foi criado por <a href="https://github.com/Atiladanvi/" target="_blank">Atila Silva</a> desenvolvedor de aplicações <strong>WEB</strong> e está sob a licença <a class="dotted-line" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 License (CC BY 3.0)</a></p>
-                        <p>Se você quiser copiar esse projeto sinta-se livre para fazer um fork no<strong> GitHub</strong>. Você pode ! <a href="https://github.com/Atiladanvi/appd-api" target="_blank">Atiladanvi/cid-api</a></p>
+                        <p>Se você quiser copiar esse projeto sinta-se livre para fazer um fork no<strong> GitHub</strong>. Você pode ! <a href="https://github.com/Atiladanvi/cid-api" target="_blank">Atiladanvi/cid-api</a></p>
 
                         <div class="speech-bubble mt-5 text-center">
                             <h3 class="speech-title">Gostaria que fosse adicionado mais algo aqui ?</h3>

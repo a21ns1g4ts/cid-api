@@ -1,8 +1,11 @@
 <?php
+/**
+ * Created by Atila Silva.
+ * Date: Sáb, jan 2019 16:31:40 +0000.
+ */
 
 namespace App\Http\Controllers;
 
-use App\Cid10;
 use App\Repositories\Cid10Repository;
 use App\Transformers\Cid10Transformer;
 
@@ -30,7 +33,18 @@ class Cid10Controller extends Controller
      */
     public function index(){
 
-       return fractal($this->cid10Repository->all(), new Cid10Transformer())->toArray();
+        if (isset($_GET['page'])){
+            $perPage = (isset($_GET['perPage']) ? $_GET['perPage'] : 10);
+            $cids = fractal()
+                ->collection($this->cid10Repository->all()->forPage($_GET['page'] , $perPage))
+                ->transformWith(new Cid10Transformer());
+        }else{
+            $cids = fractal()
+                ->collection($this->cid10Repository->all())
+                ->transformWith(new Cid10Transformer());
+        }
+
+        return response()->json($cids->toArray()['data']);
 
     }
 
@@ -40,9 +54,9 @@ class Cid10Controller extends Controller
      */
     public function show($codigo){
 
-        $cid = $this->cid10Repository->find($codigo);
+        $cid = fractal($this->cid10Repository->find($codigo), new Cid10Transformer());
 
-        return  fractal($cid, new Cid10Transformer())->toArray();
+        return  response()->json($cid->toArray()['data']);
 
     }
 }

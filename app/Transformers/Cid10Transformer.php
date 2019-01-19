@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: atila
- * Date: 08/01/19
- * Time: 23:40
+ * Created by Atila Silva.
+ * Date: Sáb, jan 2019 17:7:46 +0000.
  */
 
 namespace App\Transformers;

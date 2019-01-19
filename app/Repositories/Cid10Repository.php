@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: atila
- * Date: 10/01/19
- * Time: 12:46
+ * Created by Atila Silva.
+ * Date: Sáb, jan 2019 16:22:21 +0000.
  */
 
 namespace App\Repositories;
@@ -15,11 +13,13 @@ use Illuminate\Support\Facades\DB;
  * Class Cid10Repository
  * @package App\Repositories
  */
-class Cid10Repository
+class Cid10Repository implements Cid10RepositoryContract
 {
 
     /**
-     * @return Cid10[]|\Illuminate\Database\Eloquent\Collection|mixed
+     * Retorna todas as doenças
+     *
+     * @return \Illuminate\Database\Eloquent\Collection|mixed
      */
     public function all(){
 
@@ -34,18 +34,20 @@ class Cid10Repository
     }
 
     /**
+     * Retorna uma doença por código
+     *
      * @param $codigo
-     * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|\Illuminate\Support\Collection|null
+     * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Support\Collection|mixed
      */
     public function find($codigo){
 
-        if ($this->verifyConnectDB() === false){
+        if ($this->verifyConnectDB() !== false){
 
             return $this->getByCodeFromFile($codigo);
 
         }
 
-        return Cid10::query()->get(['codigo' , 'nome'])->where('codigo' , '=' , $codigo);
+        return Cid10::query()->get(['codigo' , 'nome'])->where('codigo' , '=' , $codigo)->first();
     }
 
     /**
@@ -54,7 +56,7 @@ class Cid10Repository
      */
     private function getByCodeFromFile($code){
 
-        return collect($this->fileData())->where('codigo' , '=' , $code);
+        return collect($this->fileData())->where('codigo' , '=' , $code)->first();
 
     }
 
