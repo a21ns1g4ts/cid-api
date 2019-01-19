@@ -46,7 +46,7 @@ A Classificação Internacional de Doenças e Problemas Relacionados à Saúde (
 
 ## Obtém pelo código
 
-`https://cid-api.herokuapp.com/{codigo-cid10}`
+`https://cid-api.herokuapp.com/cid10/{codigo-cid10}`
 
 ##### GET: 
 
