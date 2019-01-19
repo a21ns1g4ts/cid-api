@@ -41,7 +41,7 @@ class Cid10Repository implements Cid10RepositoryContract
      */
     public function find($codigo){
 
-        if ($this->verifyConnectDB() !== false){
+        if ($this->verifyConnectDB() === false){
 
             return $this->getByCodeFromFile($codigo);
 
