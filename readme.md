@@ -9,42 +9,52 @@ A Classificação Internacional de Doenças e Problemas Relacionados à Saúde (
 ### End-Points
 
 ## Lista Todas
-`http://cidapi.com/cid10`
+`https://cid-api.herokuapp.com/cid10`
 ##### GET:
 
 ```json
-{
-  "data":
-    [
-      {
-        "codigo":"A00.9",
-        "nome":"Cólera Não Especificada"
-      },
-              ...
-      {
-        "codigo":"A02",
-        "nome":"Outras Infecções Por Salmonella"
-      }
-    ]
-}   
+[
+    {
+    "codigo":"A00.9",
+    "nome":"Cólera Não Especificada"
+    },
+          ...
+    {
+    "codigo":"A02",
+    "nome":"Outras Infecções Por Salmonella"
+    }
+]  
+```
+
+
+## Paginação
+`https://cid-api.herokuapp.com/cid10?page=1&perPage=2`
+##### GET:
+
+```json
+[
+    {
+    "codigo":"A00.9",
+    "nome":"Cólera Não Especificada"
+    },
+    {
+    "codigo":"A02",
+    "nome":"Outras Infecções Por Salmonella"
+    }
+]  
 ```
 
 ## Obtém pelo código
 
-`http://cidapi.com/cid10/{codigo-cid10}`
+`https://cid-api.herokuapp.com/{codigo-cid10}`
 
 ##### GET: 
 
 ```json
 {
-  "data":
-    [
-      {
-        "codigo":"A00",
-        "nome":"Cólera"
-      }
-    ]
-}     
+    "codigo":"A00",
+    "nome":"Cólera"
+}   
 ```
 ### CC 3.0
 
