@@ -96,30 +96,6 @@
                 </div><!--//code-block-->
             </div><!--//section-block-->
             <div class="section-block">
-                <p>Obtém paginação das doenças:</p>
-                <div class="callout-success">
-                    <h6>
-                        <span class="badge-info p-1">
-                            <i class="fa fa-globe"></i> GET
-                        </span>
-                        <code>{{env('APP_URL')}}/cid10?page=1&perPage=2</code>
-                    </h6>
-                    <pre style="background: #212121">
-
-    <code class="language-js">[
-  {
-    "codigo":"A00",
-    "nome":"Cólera"
-  },
-  {
-    "codigo":"A00.0",
-    "nome":"Cólera Devida a Vibrio Cholerae 01, Biótipo Cholerae"
-  }
-]                  </code>
-                    </pre>
-                </div><!--//code-block-->
-            </div><!--//section-block-->
-            <div class="section-block">
                 <p>Obtém doença por código:</p>
                 <div class="callout-success">
                     <h6>

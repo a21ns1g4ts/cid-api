@@ -33,16 +33,9 @@ class Cid10Controller extends Controller
      */
     public function index(){
 
-        if (isset($_GET['page'])){
-            $perPage = (isset($_GET['perPage']) ? $_GET['perPage'] : 10);
-            $cids = fractal()
-                ->collection($this->cid10Repository->all()->forPage($_GET['page'] , $perPage))
-                ->transformWith(new Cid10Transformer());
-        }else{
-            $cids = fractal()
-                ->collection($this->cid10Repository->all())
-                ->transformWith(new Cid10Transformer());
-        }
+        $cids = fractal()
+            ->collection($this->cid10Repository->all())
+            ->transformWith(new Cid10Transformer());
 
         return response()->json($cids->toArray()['data']);
 

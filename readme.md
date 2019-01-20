@@ -26,24 +26,6 @@ A Classificação Internacional de Doenças e Problemas Relacionados à Saúde (
 ]  
 ```
 
-
-## Paginação
-`https://cid-api.herokuapp.com/cid10?page=1&perPage=2`
-##### GET:
-
-```json
-[
-    {
-    "codigo":"A00.9",
-    "nome":"Cólera Não Especificada"
-    },
-    {
-    "codigo":"A02",
-    "nome":"Outras Infecções Por Salmonella"
-    }
-]  
-```
-
 ## Obtém pelo código
 
 `https://cid-api.herokuapp.com/cid10/{codigo-cid10}`
