@@ -38,7 +38,7 @@ A Classificação Internacional de Doenças e Problemas Relacionados à Saúde (
     "nome":"Cólera"
 }   
 ```
-### CC 3.0
+### Licença MIT
 
 API-CID foi criado por Atila Silva desenvolvedor de aplicações WEB e está sob a licença MIT.
 
