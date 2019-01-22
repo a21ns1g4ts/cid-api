@@ -118,8 +118,8 @@
             <section id="license" class="doc-section text-center">
                 <div class="section-block">
                     <div class="jumbotron text-center">
-                        <h1 class="doc-title">CC  3.0</h1>
-                        <p>API-CID foi criado por <a href="https://github.com/Atiladanvi/" target="_blank">Atila Silva</a> desenvolvedor de aplicações <strong>WEB</strong> e está sob a licença <a class="dotted-line" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 License (CC BY 3.0)</a></p>
+                        <h1 class="doc-title">Licença MIT</h1>
+                        <p>API-CID foi criado por <a href="https://github.com/Atiladanvi/" target="_blank">Atila Silva</a> desenvolvedor de aplicações <strong>WEB</strong> e está sob a licença <a class="dotted-line" href="https://github.com/Atiladanvi/cid-api/blob/master/LICENSE" target="_blank">MIT</a></p>
                         <p>Se você quiser copiar esse projeto sinta-se livre para fazer um fork no<strong> GitHub</strong>. Você pode ! <a href="https://github.com/Atiladanvi/cid-api" target="_blank">Atiladanvi/cid-api</a></p>
 
                         <div class="speech-bubble mt-5 text-center">
