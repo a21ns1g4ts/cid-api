@@ -10,6 +10,7 @@ try {
     //
 }
 
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -44,6 +45,14 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
+
+/*register cors policy*/
+
+$app->configure('cors');
+$app->register(Barryvdh\Cors\ServiceProvider::class);
+$app->middleware([
+    \Barryvdh\Cors\HandleCors::class,
+]);
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
