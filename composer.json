@@ -1,6 +1,13 @@
 {
     "name": "cidapi",
-    "description": "",
+    "description": "Api com todas as doenças registradas pela OMS.",
+    "authors": [
+        {
+            "name": "Atila Silva",
+            "email": "atila.danvi@outlook.com"
+        }
+    ],
+    "version":1.0.0,
     "keywords": ["framework", "laravel", "lumen"],
     "license": "MIT",
     "type": "project",
