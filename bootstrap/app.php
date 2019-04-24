@@ -59,6 +59,10 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+$app->bind(
+    \App\Repositories\Cid10RepositoryContract::class,
+    \App\Repositories\Cid10FileRepository::class
+);
 /*
 |--------------------------------------------------------------------------
 | Register Middleware
