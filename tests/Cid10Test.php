@@ -4,7 +4,7 @@
  * Date: Sáb, jan 2019 16:22:3 +0000.
  */
 
-use App\Repositories\Cid10Repository;
+use App\Repositories\Cid10FileRepository;
 
 /**
  * Class Cid10Test
@@ -18,7 +18,7 @@ class Cid10Test extends TestCase
      */
     public function testGetAll()
     {
-        $cid10Repository = new Cid10Repository();
+        $cid10Repository = new Cid10FileRepository();
 
         $cids = $cid10Repository->all();
 
@@ -32,7 +32,7 @@ class Cid10Test extends TestCase
      */
     public function testFind()
     {
-        $cid10Repository = new Cid10Repository();
+        $cid10Repository = new Cid10FileRepository();
 
         $cid = $cid10Repository->find('A03.2');
 

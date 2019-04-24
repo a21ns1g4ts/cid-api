@@ -6,7 +6,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\Cid10Repository;
+use App\Repositories\Cid10RepositoryContract;
 use App\Transformers\Cid10Transformer;
 
 /**
@@ -22,7 +22,7 @@ class Cid10Controller extends Controller
      * Cid10Controller constructor.
      * @param $cid10Repository
      */
-    public function __construct(Cid10Repository $cid10Repository)
+    public function __construct(Cid10RepositoryContract $cid10Repository)
     {
         $this->cid10Repository = $cid10Repository;
     }
