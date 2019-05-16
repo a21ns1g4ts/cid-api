@@ -41,11 +41,6 @@ $app = new Laravel\Lumen\Application(
 |
 */
 
-$app->singleton(
-    Illuminate\Contracts\Debug\ExceptionHandler::class,
-    App\Exceptions\Handler::class
-);
-
 /*register cors policy*/
 
 $app->configure('cors');
