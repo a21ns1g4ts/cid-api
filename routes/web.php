@@ -11,11 +11,6 @@
 |
 */
 
-$router->get('/', function (){
-    return view('index');
-});
-
-$router->get('cid10', 'Cid10Controller@index');
-
-
 $router->get('cid10/{codigo}', 'Cid10Controller@show');
+$router->get('cid10', 'Cid10Controller@index');
+$router->get('/', 'HomeController@index');
