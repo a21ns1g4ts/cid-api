@@ -15,7 +15,7 @@ class CreateVisitorsTable extends Migration
     {
         Schema::create('visitors', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ip' , 10);
+            $table->string('ip' , 20);
             $table->string('end_point' , 20);
             $table->timestamp('created_at' );
         });
