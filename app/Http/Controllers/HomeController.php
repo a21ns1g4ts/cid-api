@@ -33,9 +33,9 @@ class HomeController extends Controller
         $visitorsPerEndPoint =  $visitors->groupBy('end_point');
 
         $visits = [
-            'home' => $visitorsPerEndPoint['/']->count(),
-            'total_cids' => $visitorsPerEndPoint['cid10/']->count(),
-            'cids' => $allVisitsCount - ($visitorsPerEndPoint['/']->count() +  $visitorsPerEndPoint['cid10/']->count()),
+            'home' => $visitorsPerEndPoint['/']->count() ?? 0,
+            'total_cids' => $visitorsPerEndPoint['cid10/']->count() ?? 0,
+            'cids' => ($allVisitsCount - ($visitorsPerEndPoint['/']->count() +  $visitorsPerEndPoint['cid10/']->count())) ?? 0,
         ];
 
         $visits['total'] = array_sum(array_values($visits));

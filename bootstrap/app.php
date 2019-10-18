@@ -56,7 +56,7 @@ $app->singleton(
 
 $app->bind(
     \App\Repositories\Cid10RepositoryContract::class,
-    \App\Repositories\Cid10DBRepository::class
+    \App\Repositories\Cid10FileRepository::class
 );
 
 /*
