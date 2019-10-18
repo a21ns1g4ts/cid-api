@@ -118,6 +118,46 @@
             <section id="license" class="doc-section text-center">
                 <div class="section-block">
                     <div class="jumbotron text-center">
+                        <h1 class="doc-title">Estatísticas</h1>
+                        <h3 class="mb-4">
+                            <span class="badge-info p-1">
+                                Acessos
+                            </span>
+                            <code>End Point</code>
+                        </h3>
+                        <h6>
+                            <span class="badge-info p-1">
+                                {{ $visits['home'] }}
+                            </span>
+                            <code>{{env('APP_URL')}}/</code>
+                        </h6>
+                        <h6>
+                            <span class="badge-info p-1">
+                                {{ $visits['total_cids'] }}
+                            </span>
+                            <code>{{env('APP_URL')}}/cid10/</code>
+                        </h6>
+                        <h6>
+                            <span class="badge-info p-1">
+                                {{ $visits['cids'] }}
+                            </span>
+                            <code>{{env('APP_URL')}}/cid10/{codigo-cid}</code>
+                        </h6>
+                        <h1 class="mt-3">
+                            <span class="badge-info p-2 mr-2">
+                                {{ $visits['total'] }}
+                            </span>
+                            Total
+                        </h1>
+                        <small>Contando desde: 18/10/2019</small>
+                    </div><!--//jumbotron-->
+                </div><!--//section-block-->
+            </section><!--//doc-section-->
+        </div>
+        <div class="content-inner">
+            <section id="license" class="doc-section text-center">
+                <div class="section-block">
+                    <div class="jumbotron text-center">
                         <h1 class="doc-title">Licença MIT</h1>
                         <p>API-CID foi criado por <a href="https://github.com/Atiladanvi/" target="_blank">Atila Silva</a> desenvolvedor de aplicações <strong>WEB</strong> e está sob a licença <a class="dotted-line" href="https://github.com/Atiladanvi/cid-api/blob/master/LICENSE" target="_blank">MIT</a></p>
                         <p>Se você quiser copiar esse projeto sinta-se livre para fazer um fork no<strong> GitHub</strong>. Você pode ! <a href="https://github.com/Atiladanvi/cid-api" target="_blank">Atiladanvi/cid-api</a></p>
@@ -137,19 +177,19 @@
         </div>
     </div><!--//page-wrapper-->
 
-<footer class="footer text-center">
-    <div class="container">
-        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-        <small class="copyright">CID-API @2019</small>
-    </div><!--//container-->
-</footer><!--//footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">CID-API @2019</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
 
-<!-- Main Javascript -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
-<script type="text/javascript" src="https://themes.3rdwavemedia.com/demo/prettydocs/assets/js/main.js"></script>
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
+    <script type="text/javascript" src="https://themes.3rdwavemedia.com/demo/prettydocs/assets/js/main.js"></script>
 
 </body>
 </html>
