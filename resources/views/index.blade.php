@@ -159,16 +159,8 @@
                 <div class="section-block">
                     <div class="jumbotron text-center">
                         <h1 class="doc-title">Licença MIT</h1>
-                        <p>API-CID foi criado por <a href="https://github.com/Atiladanvi/" target="_blank">Atila Silva</a> desenvolvedor de aplicações <strong>WEB</strong> e está sob a licença <a class="dotted-line" href="https://github.com/Atiladanvi/cid-api/blob/master/LICENSE" target="_blank">MIT</a></p>
-                        <p>Se você quiser copiar esse projeto sinta-se livre para fazer um fork no<strong> GitHub</strong>. Você pode ! <a href="https://github.com/Atiladanvi/cid-api" target="_blank">Atiladanvi/cid-api</a></p>
-
-                        <div class="speech-bubble mt-5 text-center">
-                            <h3 class="speech-title">Gostaria que fosse adicionado mais algo aqui ?</h3>
-                            <p>Abra uma issue no <strong>GitHub</strong> e especifique sua sugestão aqui <a href="https://github.com/Atiladanvi/cid-api/issues" target="_blank">GitHub</a> </p>
-                        </div>
-
-                        <div class="list list-inline text-center">
-                            <!-- Place this tag where you want the button to render. -->
+                        <p>Detalhes da <a class="dotted-line" href="https://github.com/Atiladanvi/cid-api/blob/master/LICENSE" target="_blank">licença</a></p>                    
+                        <div class="list list-inline text-center">                          
                             <a class="github-button" href="https://github.com/Atiladanvi/cid-api" data-size="large" data-show-count="true" aria-label="Star Atiladanvi/cid-api on GitHub">Star</a>
                         </div>
                     </div><!--//jumbotron-->
