@@ -4,8 +4,6 @@
  * Date: Sáb, jan 2019 16:22:3 +0000.
  */
 
-use App\Repositories\Cid10FileRepository;
-
 /**
  * Class Cid10Test
  */
@@ -18,11 +16,11 @@ class Cid10Test extends TestCase
      */
     public function testGetAll()
     {
-        $cid10Repository = new Cid10FileRepository();
+        $cid10Repository = app(\App\Repositories\Cid10RepositoryContract::class);
 
         $cids = $cid10Repository->all();
 
-        $this->assertEquals(count($cids) , 14233);
+        $this->assertNotNull($cids);
     }
 
     /**
@@ -32,11 +30,31 @@ class Cid10Test extends TestCase
      */
     public function testFind()
     {
-        $cid10Repository = new Cid10FileRepository();
+        $cid10Repository = app(\App\Repositories\Cid10RepositoryContract::class);
 
-        $cid = $cid10Repository->find('A03.2');
+        $cid = $cid10Repository->find('A00');
 
         $this->assertIsObject($cid);
+    }
+
+    /**
+     * Test getAll api.
+     *
+     * @return void
+     */
+    public function testApiGetAll()
+    {
+        $this->get('cid10')->assertResponseOk();
+    }
+
+    /**
+     * Test find api.
+     *
+     * @return void
+     */
+    public function testApiFind()
+    {
+        $this->get('cid10/A01')->assertResponseOk();
     }
 
 

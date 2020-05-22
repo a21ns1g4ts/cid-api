@@ -1,0 +1,20 @@
+dist: bionic
+language: php
+
+php:
+  - 7.2
+  - 7.3
+  - 7.4
+
+services:
+  - postgresql
+
+before_install:
+  - psql -c 'create database cid10;' -U postgres
+
+install:
+  - travis_retry composer install --no-interaction --prefer-source
+
+script:
+  - php artisan migrate --seed
+  - vendor/bin/phpunit

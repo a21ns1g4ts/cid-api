@@ -14,11 +14,18 @@ class cid10TableSeeder extends Seeder
     {
         $cids = json_decode(file_get_contents(__DIR__ . '/cid10.json'));
 
-        foreach ($cids as $cid){
+        if (env('APP_ENV') === 'test'){
             DB::table('cid10')->insert([
-                'nome' =>$cid->nome,
-                'codigo' => $cid->codigo
+                'nome' =>$cids[0]->nome,
+                'codigo' => $cids[0]->codigo
             ]);
+        }else{
+            foreach ($cids as $cid){
+                DB::table('cid10')->insert([
+                    'nome' =>$cid->nome,
+                    'codigo' => $cid->codigo
+                ]);
+            }
         }
     }
 }

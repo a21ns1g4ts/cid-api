@@ -40,10 +40,10 @@ $app = new Laravel\Lumen\Application(
 
 /*register cors policy*/
 
+$app->register(Fruitcake\Cors\CorsServiceProvider::class);
 $app->configure('cors');
-$app->register(Barryvdh\Cors\ServiceProvider::class);
 $app->middleware([
-    \Barryvdh\Cors\HandleCors::class,
+    \Fruitcake\Cors\HandleCors::class,
 ]);
 
 $app->singleton(
@@ -53,7 +53,7 @@ $app->singleton(
 
 $app->bind(
     \App\Repositories\Cid10RepositoryContract::class,
-    \App\Repositories\Cid10FileRepository::class
+    \App\Repositories\Cid10DBRepository::class
 );
 
 /*

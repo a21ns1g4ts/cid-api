@@ -47,6 +47,6 @@ class Cid10FileRepository implements Cid10RepositoryContract
      * @return mixed
      */
     private function fileData(){
-        return json_decode(file_get_contents(__BASE__.'/database/seeds/cid10.json'));
+        return json_decode(file_get_contents(__DIR__ .'/../../database/seeds/cid10.json'));
     }
 }
