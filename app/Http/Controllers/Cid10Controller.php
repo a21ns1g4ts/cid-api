@@ -1,12 +1,12 @@
 <?php
+/**
+ * Created by Atila Silva.
+ * Date: sáb, jan 2019 01:09:49
+ */
 
 namespace App\Http\Controllers;
 
 use App\Repositories\Cid10RepositoryContract;
-use App\Transformers\Cid10Transformer;
-use App\Visitors;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
 
 /**
  * Class Cid10Controller
@@ -14,7 +14,9 @@ use Illuminate\Http\Request;
  */
 class Cid10Controller extends Controller
 {
-
+    /**
+     * @var Cid10RepositoryContract
+     */
     private $cid10Repository;
 
     /**
@@ -26,43 +28,20 @@ class Cid10Controller extends Controller
         $this->cid10Repository = $cid10Repository;
     }
 
-
     /**
-     * @param Request $request
-     * @return array
+     * @return mixed
      */
-    public function index(Request $request){
-
-        $visit = new Visitors;
-        $visit->ip = $request->ip();
-        $visit->end_point = 'cid10/';
-        $visit->created_at = Carbon::now();
-        $visit->save();
-
-        $cids = fractal()
-            ->collection($this->cid10Repository->all())
-            ->transformWith(new Cid10Transformer());
-
-        return response()->json($cids->toArray()['data']);
-
+    public function index()
+    {
+        return $this->cid10Repository->all() ?? abort(404);
     }
 
     /**
-     * @param Request $request
-     * @param $codigo
-     * @return array
+     * @param $code
+     * @return mixed
      */
-    public function show(Request $request, $codigo){
-
-        $visit = new Visitors;
-        $visit->ip = $request->ip();
-        $visit->end_point = 'cid10/'. $codigo;
-        $visit->created_at = Carbon::now();
-        $visit->save();
-
-        $cid = fractal($this->cid10Repository->find($codigo), new Cid10Transformer());
-
-        return  response()->json($cid->toArray()['data']);
-
+    public function show($code)
+    {
+        return $this->cid10Repository->find($code) ?? abort(404);
     }
 }

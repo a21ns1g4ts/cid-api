@@ -1,18 +1,28 @@
 <?php
+/**
+ * Created by Atila Silva.
+ * Date: sáb, ou 2019 21:59:18 +0000.
+ */
 
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Visitors
+ * Class Visitor
+ *
  * @property string ip
  * @property string end_point
- * @property static created_at
+ * @property string created_at
  * @package App
  */
-class Visitors extends Model
+class Visitor extends Model
 {
+    /**
+     * Table name
+     * @var string
+     */
+    protected $table = 'visitors';
 
     /**
      * The attributes that are mass assignable.
@@ -23,10 +33,9 @@ class Visitors extends Model
         'ip', 'end_point', 'created_at'
     ];
 
-    public $timestamps = false;
-
     /**
-     * @var string
+     * Timestamps
+     * @var bool
      */
-    protected $table = 'visitors';
+    public $timestamps = false;
 }

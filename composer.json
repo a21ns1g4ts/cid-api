@@ -1,6 +1,6 @@
 {
-    "name": "atiladadanvi/cid10-api-php",
-    "description": "Api com todas as doenças registradas pela OMS.",
+    "name": "Atiladanvi/cid-api-php",
+    "description": "Api com todas as doenças catalogadas pela OMS.",
     "authors": [
         {
             "name": "Atila Silva",
@@ -14,8 +14,7 @@
         "php": "^7.2.5",
         "ext-json": "*",
         "fruitcake/laravel-cors": "^2.0",
-        "laravel/lumen-framework": "^7.0",
-        "spatie/laravel-fractal": "^5.4"
+        "laravel/lumen-framework": "^7.0"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.9.1",

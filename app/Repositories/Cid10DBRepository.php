@@ -1,14 +1,12 @@
 <?php
 /**
  * Created by Atila Silva.
- * Date: Sáb, jan 2019 16:22:21 +0000.
+ * Date: sáb, jan 2019 16:22:21 +0000.
  */
 
 namespace App\Repositories;
 
 use App\Cid10;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Collection;
 
 /**
  * Class Cid10DBRepository
@@ -16,23 +14,25 @@ use Illuminate\Support\Collection;
  */
 class Cid10DBRepository implements Cid10RepositoryContract
 {
-
     /**
-     * Retorna todas as doenças
-     *
-     * @return \Illuminate\Database\Eloquent\Collection|mixed
+     * Get all Cids10
+     * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function all(){
-        return Cid10::all();
+    public function all()
+    {
+        return Cid10::get(['codigo' , 'nome']);
     }
 
     /**
-     * Retorna uma doença por código
-     *
-     * @param $codigo
-     * @return Builder|Collection|mixed
+     * Find Cid10
+     * @param $code
+     * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function find($codigo){
-        return Cid10::query()->get(['codigo' , 'nome'])->where('codigo' , '=' , $codigo)->first();
+    public function find($code)
+    {
+        return Cid10::query()
+            ->get(['codigo' , 'nome'])
+            ->where('codigo' , '=' , $code)
+            ->first();
     }
 }
