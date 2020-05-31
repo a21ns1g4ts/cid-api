@@ -1,5 +1,5 @@
 {
-    "name": "Atiladanvi/cid-api-php",
+    "name": "atiladanvi/cid-api-php",
     "description": "Api com todas as doenças catalogadas pela OMS.",
     "authors": [
         {
@@ -14,6 +14,7 @@
         "php": "^7.2.5",
         "ext-json": "*",
         "fruitcake/laravel-cors": "^2.0",
+        "graham-campbell/throttle": "^8.0",
         "laravel/lumen-framework": "^7.0"
     },
     "require-dev": {

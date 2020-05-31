@@ -73,6 +73,18 @@ Veja
 http://localhost:8080   
 
 ## API
+
+**Importante:**
+
+Atualmente temos uma api demonstração no seguinte endereço: https://cid10-api.herokuapp.com.
+No entanto, a partir de 2021 ela será desativada e funcionará na seguinte url: https://cid.api.mokasoft.org.
+
+Você só pode fazer 60 requisições por minuto. Com um tempo de retenção de 3 minutos caso exceda o limite. 
+Se você se sentir mal por isso sinta-se livre para fazer um clone do projeto e executar a api na sua máquina,
+basta configurar essa política como falsa no arquivo .env `APP_THROTTLE=false`
+
+Servidores não dão em árvore e não tente enganar as nossas estatisticas.
+
 ##### CID-10
 
 |Nome|Descrição|Rota|Demo|

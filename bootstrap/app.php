@@ -2,6 +2,13 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
+use Illuminate\Http\Request;
+
+Request::setTrustedProxies(
+    ['127.0.0.1', 'REMOTE_ADDR'],
+    Request::HEADER_X_FORWARDED_AWS_ELB
+);
+
 (new Laravel\Lumen\Bootstrap\LoadEnvironmentVariables(
     dirname(__DIR__)
 ))->bootstrap();
@@ -38,14 +45,10 @@ $app = new Laravel\Lumen\Application(
 |
 */
 
-/*register cors policy*/
+$app->register(GrahamCampbell\Throttle\ThrottleServiceProvider::class);
 
 $app->register(Fruitcake\Cors\CorsServiceProvider::class);
 $app->configure('cors');
-$app->middleware([
-    \Fruitcake\Cors\HandleCors::class,
-    \App\Http\Middleware\VisitorAnalyticsMiddleware::class
-]);
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
@@ -101,13 +104,14 @@ $app->configure('app');
 |
 */
 
-// $app->middleware([
-//     App\Http\Middleware\ExampleMiddleware::class
-// ]);
+$app->middleware([
+    \Fruitcake\Cors\HandleCors::class,
+    \App\Http\Middleware\VisitorAnalyticsMiddleware::class
+]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+$app->routeMiddleware([
+    'throttle' => GrahamCampbell\Throttle\Http\Middleware\ThrottleMiddleware::class,
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -137,6 +141,7 @@ $app->configure('app');
 
 $app->router->group([
     'namespace' => 'App\Http\Controllers',
+    'middleware' =>  env('APP_THROTTLE') ? 'throttle:60,3' : null
 ], function ($router) {
     require __DIR__.'/../routes/web.php';
     require __DIR__.'/../routes/api.php';
