@@ -73,6 +73,12 @@ Veja
 http://localhost:8080   
 
 ## API
+
+**Importante:**
+
+Atualmente temos uma api demonstração no seguinte endereço: https://cid10-api.herokuapp.com.
+No entanto, a partir de 2021 ela será desativada e funcionará na seguinte url: https://cid.api.mokasoft.org 
+
 ##### CID-10
 
 |Nome|Descrição|Rota|Demo|

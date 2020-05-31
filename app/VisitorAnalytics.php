@@ -22,7 +22,7 @@ class VisitorAnalytics
     public static function visit(Request $request)
     {
         $visit = new Visitor;
-        $visit->ip = $request->ip();
+        $visit->ip = $request->getClientIp();
         $visit->end_point = $request->getRequestUri();
         $visit->created_at = Carbon::now();
         $visit->save();
