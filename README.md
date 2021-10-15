@@ -6,7 +6,6 @@ A cada estado de saúde é atribuída uma categoria única à qual corresponde u
 Cada doença pode ser dada a uma categoria e receber um código de até seis caracteres de longitude (em formato de X00.000). 
 Cada uma das tais categorias pode incluir um grupo de doenças similares.
 
-[![Build Status](https://img.shields.io/travis/atiladanvi/cid10-api-php/master.svg?style=flat-square)](https://travis-ci.org/atiladanvi/cid10-api-php)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Requerimentos 
@@ -74,18 +73,12 @@ http://localhost:8080
 
 ## API
 
-**Importante:**
-
-Atualmente temos uma api demonstração no seguinte endereço: https://cid10-api.herokuapp.com.
-No entanto, a partir de 2021 ela será desativada e funcionará na seguinte url: https://cid.api.mokasoft.org 
-
 ##### CID-10
 
-|Nome|Descrição|Rota|Demo|
-|---|---|---|---|
-|Index|Lista todas|cid10/|https://cid10-api.herokuapp.com/cid10/|
-|Show|Obtêm pelo código|cid10/{codigo-cid}/|http://cid10-api.herokuapp.com/cid10/A01|
-
+|Nome|Descrição|Uri|
+|---|---|---|
+|Index|Lista todas|http://localhost:8080/cid10/|
+|Show|Obtêm pelo código|http://localhost:8080/cid10/{codigo-cid}/|
 
 ### Log de mudanças
 
